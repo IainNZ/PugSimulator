@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>GS PUGS PUGS PUGS PU</title>
+</head>
+<body>
+
+<img id="kelly" src="kelly.jpg" style="position: fixed;">
+
+<img id="pug1" src="pug1.jpg" style="position: fixed;">
+<img id="pug2" src="pug2.gif" style="position: fixed;">
+<img id="pug3" src="pug3.gif" style="position: fixed;">
+<img id="pug4" src="pug4.jpg" style="position: fixed;">
+<img id="pug5" src="pug5.gif" style="position: fixed;">
+<img id="pug6" src="pug6.jpg" style="position: fixed;">
+<img id="pug7" src="pug7.jpg" style="position: fixed;">
+<img id="pug8" src="pug8.gif" style="position: fixed;">
+<img id="pug9" src="pugs9.gif" style="position: fixed;">
+<img id="pug10" src="pug10.jpg" style="position: fixed;">
+<img id="pug11" src="pug11.jpg" style="position: fixed;">
+<img id="pug12" src="pug12.jpg" style="position: fixed;">
+<img id="pug13" src="pug13.jpg" style="position: fixed;">
+<img id="pug14" src="pug14.jpg" style="position: fixed;">
+<img id="pug15" src="pug15.jpeg" style="position: fixed;">
+<img id="pug16" src="pug16.jpg" style="position: fixed;">
+<img id="pug17" src="pug17.gif" style="position: fixed;">
+<img id="pug18" src="pug18.gif" style="position: fixed;">
+<img id="pug19" src="pug19.gif" style="position: fixed;">
+<img id="pug20" src="pug20.gif" style="position: fixed;">
+
+
+<div id="happypug" style="position: fixed; font-size: 80px; font-family: 'Comic Sans MS', cursive, sans-serif; font-weight: bold;">HAPPY PUG</div>
+<div id="birthday" style="position: fixed; font-size: 80px; font-family: 'Comic Sans MS', cursive, sans-serif; font-weight: bold;">BIRTHDAY</div>
+<div id="kellytxt" style="position: fixed; font-size: 80px; font-family: 'Comic Sans MS', cursive, sans-serif; font-weight: bold;">KELLY!</div>
+
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script>
+// Get crazy
+setInterval(function(){
+    document.body.style.background = '#'+Math.floor(Math.random()*16777215).toString(16);
+    old_title = document.title;
+    document.title = "*" + old_title.slice(2,-1) + old_title.slice(1,2) + "*";
+
+    for (var i = 1; i <= 20; i++) {
+        $("#pug"+i).css( "top", Math.random()*(window.innerHeight-$("#pug"+i).height())+"px");
+        $("#pug"+i).css("left", Math.random()*(window.innerWidth -$("#pug"+i).width() )+"px");
+        $("#pug"+i).css("zIndex", Math.floor(Math.random()*100));
+    }
+    
+    $("#kelly").css( "top", (window.innerHeight-$("#kelly").height())/2+"px");
+    $("#kelly").css("left", (window.innerWidth -$("#kelly").width() )/2+"px");
+
+    $("#happypug").css( "top", (window.innerHeight-$("#happypug").height())/4-Math.random()*40+"px");
+    $("#happypug").css("left", (window.innerWidth -$("#happypug").width() )/2+"px");
+    $("#happypug").css("color", '#'+Math.floor(Math.random()*16777215).toString(16));
+    $("#happypug").css("zIndex", +200);
+
+    $("#birthday").css( "top",  (window.innerHeight-$("#birthday").height())/2-Math.random()*40+"px");
+    $("#birthday").css("left",  (window.innerWidth -$("#birthday").width() )/2+"px");
+    $("#birthday").css("color", '#'+Math.floor(Math.random()*16777215).toString(16));
+    $("#birthday").css("zIndex", +200);
+
+
+    $("#kellytxt").css( "top",3*(window.innerHeight-$("#kellytxt").height())/4-Math.random()*40+"px");
+    $("#kellytxt").css("left",  (window.innerWidth -$("#kellytxt").width() )/2+"px");
+    $("#kellytxt").css("color", '#'+Math.floor(Math.random()*16777215).toString(16));
+    $("#kellytxt").css("zIndex", +200);
+}, 500);
+
+</script>
+
+<audio autoplay loop>
+      <source src="popped.mp3">
+</audio>
+
+</body>
+</html>
